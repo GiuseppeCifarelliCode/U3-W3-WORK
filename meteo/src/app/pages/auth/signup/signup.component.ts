@@ -24,12 +24,15 @@ export class SignupComponent {
   ){}
 
   register(){
-    this.authSvc.register(this.formData)
+    if(this.formData.password === this.repeatPassword){
+      this.authSvc.register(this.formData)
     .subscribe(res => {
       console.log(res);
       this.router.navigate(['/home'])
 
     })
+    }
+    else alert("Passwords don't match")
   }
 
 }

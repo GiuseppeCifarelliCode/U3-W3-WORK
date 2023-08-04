@@ -17,6 +17,18 @@
       "password": "$2a$10$Si5oBIa4.pJjl9Y31tPHqOB93GNDm3zAODQex1beb9.SuUNTGjHKy",
       "username": "LorenzoIlBoomer",
       "id": 3
+    },
+    {
+      "email": "pivuj@mailinator.com",
+      "password": "$2a$10$FyhDuykrXQb7wOIaLglOmOksr7QWohG66NfAqnx6gOp2LLIGcx.R6",
+      "username": "lyxab",
+      "id": 4
+    },
+    {
+      "email": "loryc@mailinator.com",
+      "password": "$2a$10$BOBf5OCiujzF.EyiC0ZTxuZ.6b4U1ybx2lpy6irzIur16qLUaP7kW",
+      "username": "dycasyne",
+      "id": 5
     }
   ]
 }
