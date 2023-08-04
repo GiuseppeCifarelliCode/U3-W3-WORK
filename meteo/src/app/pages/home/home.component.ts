@@ -37,11 +37,11 @@ export class HomeComponent {
   }
 
   takeUrl(city:string){
-    this.cityUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=5&appid=b3df8c2191731ce389a9f1762d2fd91a'
+    this.cityUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + `&limit=5&appid=${this.weatherSvc.apiKey}`
     this.getCity(this.cityUrl)
     this.weatherSvc.getWeather('http://api.openweathermap.org/data/2.5/forecast?lat='+ this.weatherSvc.searchedCity[0].lat+
     '&lon='+ this.weatherSvc.searchedCity[0].lon+
-    '&appid=b3df8c2191731ce389a9f1762d2fd91a&units=metric')
+    `&appid=${this.weatherSvc.apiKey}&units=metric`)
     .subscribe(city => {
            this.city = city as IGeneral
            this.city.list.splice(4, this.city.list.length)

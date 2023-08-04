@@ -11,12 +11,13 @@ export class WeatherService {
 
   searchedCity!:ISearchedCity[]
   favourites!:IGeneral[]
+  apiKey :string = 'b3df8c2191731ce389a9f1762d2fd91a'
 
   constructor(
     private http:HttpClient
   ) { }
 
-  getWeather( url:string = 'http://api.openweathermap.org/data/2.5/forecast?lat=40.667029&lon=16.6063265&appid=b3df8c2191731ce389a9f1762d2fd91a&units=metric'){
+  getWeather( url:string = `http://api.openweathermap.org/data/2.5/forecast?lat=40.667029&lon=16.6063265&appid=${this.apiKey}&units=metric`){
     return this.http.get(url)
   }
 
