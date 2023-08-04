@@ -7,13 +7,14 @@
   <div *ngFor="let number of city.list, let i = index" class="col-3">
   <div class="card">
   <img [src]="'https://openweathermap.org/img/wn/'+number.weather[0].icon +'@2x.png'" class="card-img-top w-50" alt={{number.weather[0].description}}>
-    <div class="card-body">
+    <div class="card-body d-flex flex-column align-items-center">
     <h5 class="card-title">{{city.city.name}}</h5>
     <a class="btn btn-warning"(click)="addToFavourites(city)" >{{favouriteButton}}</a>
-    <p class="card-text">Date: {{day[i] | date: 'medium'}}</p>
-    <p class="card-text">Weather: {{number.weather[0].description}}</p>
-    <p class="card-text">Max Temp: {{number.main.temp_max}}°C</p>
-    <p class="card-text">Min Temp: {{number.main.temp_min}}°C</p>
+    <p class="card-text text-center"><span>Date:</span> {{day[i] | date: 'medium'}}</p>
+    <p class="card-text text-center"><span>Weather:</span> {{number.weather[0].description}}</p>
+    <p class="card-text text-center"><span>Max Temp:</span> {{number.main.temp_max}}°C</p>
+    <p class="card-text text-center"><span>Min Temp:</span> {{number.main.temp_min}}°C</p>
+    <p class="card-text text-center"><span>Humidity:</span> {{number.main.humidity}}/100</p>
   </div>
     </div>
   </div>

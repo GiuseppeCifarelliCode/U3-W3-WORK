@@ -3,12 +3,12 @@
   <div class="card">
   <img [src]="'https://openweathermap.org/img/wn/'+number.list[i].weather[0].icon +'@2x.png'" class="card-img-top w-50"
   alt={{number.list[i].weather[0].description}}>
-    <div class="card-body">
+    <div class="card-body d-flex flex-column align-items-center">
     <h5 class="card-title">{{number.city.name}}</h5>
     <a class="btn btn-danger" (click)="removeFromFavourites(number)">Remove From Favourites</a>
-    <p class="card-text">Weather: {{number.list[i].weather[0].description}}</p>
-    <p class="card-text">Max Temp: {{number.list[i].main.temp_max}}°C</p>
-    <p class="card-text">Min Temp: {{number.list[i].main.temp_min}}°C</p>
+    <p class="card-text text-center"><span>Weather:</span> {{number.list[i].weather[0].description}}</p>
+    <p class="card-text text-center"><span>Max Temp:</span> {{number.list[i].main.temp_max}}°C</p>
+    <p class="card-text text-center"><span>Min Temp:</span> {{number.list[i].main.temp_min}}°C</p>
   </div>
     </div>
   </div>
