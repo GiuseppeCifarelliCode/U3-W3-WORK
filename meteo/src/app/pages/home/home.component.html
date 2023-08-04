@@ -1,0 +1,20 @@
+<form class="d-flex my-3" role="search" (submit)="takeUrl(searchedCity)">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchedCity" name="searchedCity" >
+  <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+<div *ngIf="city" class="row">
+  <div *ngFor="let number of city.list, let i = index" class="col-3">
+  <div class="card">
+  <img [src]="'https://openweathermap.org/img/wn/'+number.weather[0].icon +'@2x.png'" class="card-img-top w-50" alt={{number.weather[0].description}}>
+    <div class="card-body">
+    <h5 class="card-title">{{city.city.name}}</h5>
+    <a class="btn btn-warning"(click)="addToFavourites(city)" >{{favouriteButton}}</a>
+    <p class="card-text">Date: {{day[i] | date: 'medium'}}</p>
+    <p class="card-text">Weather: {{number.weather[0].description}}</p>
+    <p class="card-text">Max Temp: {{number.main.temp_max}}°C</p>
+    <p class="card-text">Min Temp: {{number.main.temp_min}}°C</p>
+  </div>
+    </div>
+  </div>
+</div>

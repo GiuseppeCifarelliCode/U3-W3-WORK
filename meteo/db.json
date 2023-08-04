@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "cypezu@mailinator.com",
+      "password": "$2a$10$3IUKNaXnqkdiEzcfXR3hF.aGID9yLB5ObcTebu1HVT2kwZ.8Me8wC",
+      "username": "wupim",
+      "id": 1
+    },
+    {
+      "email": "jevopu@mailinator.com",
+      "password": "$2a$10$AAO21P2PWz1URZDk27gueO5HWmn8ldjGLY7wf5VPQorm50xiJXyru",
+      "username": "fufetu",
+      "id": 2
+    },
+    {
+      "email": "lorenzo@boomer.com",
+      "password": "$2a$10$Si5oBIa4.pJjl9Y31tPHqOB93GNDm3zAODQex1beb9.SuUNTGjHKy",
+      "username": "LorenzoIlBoomer",
+      "id": 3
+    }
+  ]
+}
